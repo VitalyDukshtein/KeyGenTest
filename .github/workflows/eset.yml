@@ -36,7 +36,7 @@ jobs:
           cd ESET-KeyGen
           sudo apt update
           sudo apt install python3-pip
-          sudo pip install --break-system-packages -r requirements.txt
+          sudo pip install --break-system-packages --ignore-installed -r requirements.txt
           if [[ (${ACCOUNT} != 0) && (${KEY} != 0) ]]
           then
           (seq 1 $((ACCOUNT)) | xargs -I {} -P $((ACCOUNT)) python3 main.py --chrome --account --email-api ${MAIL} --skip-webdriver-menu --skip-update-check) & (seq 1 $((KEY)) | xargs -I {} -P $((KEY)) python3 main.py --chrome --key --email-api ${MAIL} --skip-webdriver-menu --skip-update-check)
