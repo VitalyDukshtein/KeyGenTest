@@ -32,7 +32,7 @@ jobs:
           ACCOUNT=${{ github.event.inputs.account }}
           KEY=${{ github.event.inputs.key }}
           MAIL=${{ github.event.inputs.mail }}
-          git clone https://github.com/VitalyDukshtein/ESET-KeyGen.git
+          git clone https://github.com/VitalyDukshtein/KeyGenTest.git
           cd ESET-KeyGen
           sudo apt update
           sudo apt install python3-pip
